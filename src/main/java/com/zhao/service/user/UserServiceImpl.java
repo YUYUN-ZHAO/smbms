@@ -27,7 +27,7 @@ public class UserServiceImpl implements UserService {
             user = userDao.getLoginUser(connection, userCode);
 
             // 如果查询出的密码和输入的密码不相同，user置空
-            if (!password.equals(user.getUserPassword())){
+            if ((user != null) && (!password.equals(user.getUserPassword()))){
                 user = null;
             }
 
@@ -38,6 +38,23 @@ public class UserServiceImpl implements UserService {
         }
 
         return user;
+    }
+
+    public boolean updatePsw(int id, String password) {
+        Connection connection = null;
+        boolean flag = false;
+        try {
+            connection  = BaseDao.getConnection();
+            if (userDao.updatePsw(connection, id, password) > 0) {
+                flag = true;
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } finally {
+            BaseDao.release(connection, null, null);
+        }
+
+        return flag;
     }
 
     @Test

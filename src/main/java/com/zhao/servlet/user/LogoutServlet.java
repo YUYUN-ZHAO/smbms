@@ -14,12 +14,12 @@ public class LogoutServlet extends HttpServlet {
         // 删除session属性，这样再次访问主页面时，能过滤出不经过注册就访问的请求
         req.getSession().removeAttribute(Constant.USER_SESSION);
         resp.sendRedirect(req.getContextPath() + "/login.jsp");
-
-
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         doGet(req, resp);
     }
+
+
 }

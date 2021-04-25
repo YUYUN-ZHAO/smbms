@@ -16,7 +16,7 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("LoginServlet Start ...........");
+        //System.out.println("LoginServlet Start ...........");
 
         String userCode = req.getParameter("userCode");
         String userPassword = req.getParameter("userPassword");
@@ -29,7 +29,7 @@ public class LoginServlet extends HttpServlet {
             req.getSession().setAttribute(Constant.USER_SESSION, user);
 
             // 跳转到主页
-            resp.sendRedirect("jsp/frame.jsp");
+            resp.sendRedirect(req.getContextPath() + "/jsp/frame.jsp");
         } else {
             // 转发回登录页面，提示用户名或密码错误
             req.setAttribute("error", "用户名或密码不正确");

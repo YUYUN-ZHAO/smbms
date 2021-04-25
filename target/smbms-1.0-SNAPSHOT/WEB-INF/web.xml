@@ -50,4 +50,20 @@
         <url-pattern>/jsp/logout.do</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>UserServlet</servlet-name>
+        <servlet-class>com.zhao.servlet.user.UserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserServlet</servlet-name>
+        <url-pattern>/jsp/user.do</url-pattern>
+    </servlet-mapping>
+
+    <!-- 默认Session过期时间-->
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
+
+
 </web-app>
