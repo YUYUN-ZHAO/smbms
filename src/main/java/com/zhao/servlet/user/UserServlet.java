@@ -33,7 +33,6 @@ public class UserServlet extends HttpServlet {
         doGet(req, resp);
     }
 
-
     public void updatePwd(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // 从Session中获取用户
         Object obj = req.getSession().getAttribute(Constant.USER_SESSION);
