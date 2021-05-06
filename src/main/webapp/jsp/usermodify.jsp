@@ -7,7 +7,7 @@
             <span>用户管理页面 >> 用户修改页面</span>
         </div>
         <div class="providerAdd">
-        <form id="userForm" name="userForm" method="post" action="${pageContext.request.contextPath }/jsp/user.do">
+        <form id="userForm" name="userForm" method="p                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ost" action="${pageContext.request.contextPath }/jsp/user.do">
 			<input type="hidden" name="method" value="modifyexe">
 			<input type="hidden" name="uid" value="${user.id }"/>
 			 <div>
