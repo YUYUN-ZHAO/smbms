@@ -31,6 +31,7 @@ public class BaseDao {
             e.printStackTrace();
             System.out.println("驱动加载失败");
         }
+
     }
 
     public static Connection getConnection() throws SQLException {
