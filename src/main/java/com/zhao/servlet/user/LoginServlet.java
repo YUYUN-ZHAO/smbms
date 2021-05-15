@@ -35,8 +35,6 @@ public class LoginServlet extends HttpServlet {
             req.setAttribute("error", "用户名或密码不正确");
             req.getRequestDispatcher("login.jsp").forward(req, resp);
         }
-
-
     }
 
     @Override
