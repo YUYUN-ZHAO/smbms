@@ -27,6 +27,7 @@ public class BaseDao {
             // 加载MySQL驱动
             Class.forName(p.getProperty("driver"));
             System.out.println("驱动加载成功");
+
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("驱动加载失败");
