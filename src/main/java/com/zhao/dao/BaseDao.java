@@ -39,8 +39,6 @@ public class BaseDao {
         return DriverManager.getConnection(url, username, password);
     }
 
-
-
     // 查询
     public static ResultSet execute(Connection connection, PreparedStatement preparedStatement, ResultSet resultSet, String sql, Object[] params) throws SQLException {
         preparedStatement = connection.prepareStatement(sql);
